@@ -18,12 +18,12 @@ class Question:
         """
         return self.points
 
-    def is_correct(self, user_answer):
+    def is_correct(self):
         """Возвращает True, если ответ пользователя совпадает
         с верным ответов иначе False.
         """
-        self.user_answer = user_answer
-        return  self.user_answer == self.right_answer
+        # self.user_answer = user_answer
+        return self.user_answer == self.right_answer
 
     def build_question(self):
         """Возвращает вопрос в понятном пользователю виде, например:
@@ -33,7 +33,7 @@ class Question:
         return f"{self.question_text}\nСложность {self.difficulty}/5"
 
     def build_feedback(self):
-        # if is_correct():
-        if self.user_answer == self.right_answer:
+        if self.is_correct():
+        # if self.user_answer == self.right_answer:
             return f"Ответ верный, получено {self.points} баллов"
         else: return f"Ответ неверный, верный ответ {self.right_answer}"
