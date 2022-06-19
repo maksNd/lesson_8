@@ -33,7 +33,7 @@ class Question:
         return f"{self.question_text}\nСложность {self.difficulty}/5"
 
     def build_feedback(self):
-        # if is_correct():
+        # if self.is_correct():
         if self.user_answer == self.right_answer:
             return f"Ответ верный, получено {self.points} баллов"
         else: return f"Ответ неверный, верный ответ {self.right_answer}"

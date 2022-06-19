@@ -8,8 +8,7 @@ def main():
 
     for question in questions:
         print(question.build_question())
-        user_answer = (question.is_correct(input()))
-        if user_answer:
+        if question.is_correct(input()):
             user_points += question.get_points()
             right_answers_counter += 1
         print(question.build_feedback())
