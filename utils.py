@@ -30,4 +30,4 @@ def get_statistic(user_points: int, right_answer_counter: int, questions_quantit
     """
     return f"Вот и все!".rjust(40) + "\n" + \
            f"Отвечено {right_answer_counter} вопроса из {questions_quantity}".rjust(40) + "\n" + \
-           f"Набрано балло: {user_points}".rjust(40)
+           f"Набрано баллов: {user_points}".rjust(40)
